@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -45,4 +48,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation ("com.airbnb.android:lottie:6.0.0")
+    implementation ("androidx.viewpager2:viewpager2:1.0.0")
+    implementation ("com.google.android.material:material:1.6.0")
+    implementation ("me.relex:circleindicator:2.1.6")
 }
