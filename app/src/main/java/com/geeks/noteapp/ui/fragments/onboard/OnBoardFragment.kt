@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.geeks.noteapp.R
 import com.geeks.noteapp.databinding.FragmentOnBoardBinding
 import com.geeks.noteapp.ui.adapter.OnBoardPagerAdapter
+import com.geeks.noteapp.utils.PreferenceHelper
 
 class OnBoardFragment : Fragment() {
 
@@ -40,9 +42,12 @@ class OnBoardFragment : Fragment() {
             }
         })
         binding.txtSkip.setOnClickListener {
-            if (currentItem == 2) {
+            if (currentItem < 3) {
+                setCurrentItem(currentItem + 2, true)
             }
-            setCurrentItem(2, true)
+        }
+        binding.btnStart.setOnClickListener {
+            findNavController().navigate(R.id.action_onBoardFragment_to_noteFragment)
         }
     }
 
