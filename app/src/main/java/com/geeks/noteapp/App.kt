@@ -14,11 +14,7 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
-        // Инициализация PreferenceHelper с контекстом
         sharedPreferences = PreferenceHelper(this)
-
-        // Инициализация базы данных
         getInstance()
     }
 
