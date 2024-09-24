@@ -25,6 +25,9 @@
 
     <Button
         android:id="@+id/btn_start"
+        android:text="Начать"
+        android:textStyle="bold"
+        android:textColor="@color/circle_orange"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="26dp"
         android:layout_width="wrap_content"
