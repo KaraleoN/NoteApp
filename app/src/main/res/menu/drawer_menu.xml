@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_onboard"
+        android:title="Onboard"
+        android:icon="@drawable/ic_onboard" />
+    <item
+        android:id="@+id/nav_note"
+        android:title="Note"
+        android:icon="@drawable/ic_note" />
+    <item
+        android:id="@+id/nav_chat"
+        android:title="Chat"
+        android:icon="@drawable/ic_chat" />
+</menu>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/singUpFragment">
+    app:startDestination="@id/chatFragment">
 
     <fragment
         android:id="@+id/onBoardFragment"
@@ -46,9 +46,36 @@
             android:name="noteid"
             app:argType="integer" />
     </fragment>
+
     <fragment
         android:id="@+id/singUpFragment"
         android:name="com.geeks.noteapp.ui.fragments.signup.SingUpFragment"
         android:label="fragment_sing_up"
         tools:layout="@layout/fragment_sing_up" />
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.geeks.noteapp.ui.fragments.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+
+    <action
+        android:id="@+id/action_chatFragment_to_noteFragment"
+        app:destination="@id/noteFragment" />
+
+    <action
+        android:id="@+id/action_chatFragment_to_onBoardFragment"
+        app:destination="@id/onBoardFragment" />
+
+    <action
+        android:id="@+id/action_noteFragment_to_chatFragment"
+        app:destination="@id/chatFragment" />
+
+    <action
+        android:id="@+id/action_noteFragment_to_onBoardFragment"
+        app:destination="@id/onBoardFragment" />
+
+    <action
+        android:id="@+id/action_onBoardFragment_to_chatFragment"
+        app:destination="@id/chatFragment" />
 </navigation>
